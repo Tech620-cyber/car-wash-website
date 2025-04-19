@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
   <title>Fresh Shine Car Wash</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
 </head>
 <body>
   <header>
@@ -40,19 +42,32 @@
     </ul>
   </section>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Basic Wash - £10</li>
-      <li>Interior + Exterior - £20</li>
-      <li>Premium Shine - £30</li>
-    </ul>
-  </section>
-
   <section class="booking">
     <h2>Book a Wash</h2>
-    <p>Call or text us at: <strong>07943172221</strong></p>
-    <p>Email: <strong>mihsanulhaq78@gmail.com</strong></p>
+    <form action="https://formspree.io/mihsanulhaq78@gmail.com" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="service">Select Service:</label>
+      <select id="service" name="service" required>
+        <option value="basic-wash">Basic Wash - £10</option>
+        <option value="full-detail">Full Detail - £20</option>
+        <option value="premium-shine">Premium Shine - £30</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="map">
+    <h2>Our Location</h2>
+    <div id="google-map" style="height: 400px; width: 100%;"></div>
   </section>
 
   <footer>
@@ -60,5 +75,19 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function initMap() {
+      var bracknell = {lat: 51.4093, lng: -0.7480};
+      var map = new google.maps.Map(document.getElementById('google-map'), {
+        zoom: 12,
+        center: bracknell
+      });
+      var marker = new google.maps.Marker({
+        position: bracknell,
+        map: map,
+        title: 'Fresh Shine Car Wash Location'
+      });
+    }
+  </script>
 </body>
 </html>
