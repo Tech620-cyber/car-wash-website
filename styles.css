@@ -3,102 +3,82 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  background: linear-gradient(135deg, #ff3b3f, #fc00ff);
+  color: #fff;
 }
 
 header {
-  background: #2e86de;
-  color: white;
+  text-align: center;
   padding: 20px;
+  background: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1, h2 {
+  color: #fff;
+}
+
+.abstract-section {
+  padding: 40px;
   text-align: center;
 }
 
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-}
-
-.slide {
-  display: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.text {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-
-.why {
-  padding: 20px;
-  background: white;
-  margin: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.why ul {
+.abstract-section ul {
   list-style-type: none;
   padding: 0;
 }
 
-.why li {
+.abstract-section li {
+  font-size: 18px;
   margin: 10px 0;
 }
 
-.booking {
+.booking-form, .contact-form {
   padding: 20px;
-  background: white;
-  margin: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  max-width: 600px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.booking form {
-  display: flex;
-  flex-direction: column;
-}
-
-.booking label {
-  margin-top: 10px;
-}
-
-.booking input, .booking select {
-  padding: 10px;
-  margin: 10px 0;
+.booking-form input, .contact-form input, .contact-form textarea, .booking-form select {
   width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #fc00ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3b3f;
 }
 
 footer {
   text-align: center;
   padding: 10px;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-#google-map {
-  width: 100%;
-  height: 400px;
-}
-
-@media (max-width: 600px) {
-  header, .services, .booking, .why {
-    padding: 15px;
-  }
-
-  .booking button {
-    padding: 10px 15px;
-    font-size: 16px;
-  }
+  background: #111;
+  margin-top: 30px;
 }

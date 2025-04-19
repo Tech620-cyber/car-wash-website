@@ -6,88 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fresh Shine Car Wash</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
 </head>
 <body>
   <header>
-    <h1>Fresh Shine Car Wash</h1>
-    <p>Mobile Car Wash Services | Affordable | Reliable | Fast</p>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="book.html">Book a Wash</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <h1>Welcome to Fresh Shine Car Wash</h1>
+    <p>Your car, our passion. We come to you for a spotless shine!</p>
   </header>
 
-  <section class="slideshow">
-    <div class="slideshow-container">
-      <div class="slide fade">
-        <img src="https://via.placeholder.com/1500x600?text=Car+Wash+1" alt="Car Wash Image 1">
-        <div class="text">Keep Your Car Shiny!</div>
-      </div>
-      <div class="slide fade">
-        <img src="https://via.placeholder.com/1500x600?text=Car+Wash+2" alt="Car Wash Image 2">
-        <div class="text">A Clean Car is a Happy Car</div>
-      </div>
-      <div class="slide fade">
-        <img src="https://via.placeholder.com/1500x600?text=Car+Wash+3" alt="Car Wash Image 3">
-        <div class="text">Protect Your Investment</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why">
-    <h2>Why Choose Fresh Shine Car Wash?</h2>
+  <section class="abstract-section">
+    <h2>Why Choose Us?</h2>
     <ul>
-      <li><strong>Save Time:</strong> We come to you, at your convenience!</li>
-      <li><strong>Preserve Your Car:</strong> Regular washing protects your car’s paint and finish.</li>
-      <li><strong>Improve Appearance:</strong> A clean car looks brand new and boosts your confidence!</li>
-      <li><strong>Eco-Friendly:</strong> We use eco-friendly products to keep your car clean and green!</li>
+      <li><strong>Convenient:</strong> We come to you, at your location.</li>
+      <li><strong>Affordable:</strong> Get a premium wash without the premium price.</li>
+      <li><strong>Eco-Friendly:</strong> Using green products that are safe for your car and the environment.</li>
     </ul>
-  </section>
-
-  <section class="booking">
-    <h2>Book a Wash</h2>
-    <form action="https://formspree.io/mihsanulhaq78@gmail.com" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="service">Select Service:</label>
-      <select id="service" name="service" required>
-        <option value="basic-wash">Basic Wash - £10</option>
-        <option value="full-detail">Full Detail - £20</option>
-        <option value="premium-shine">Premium Shine - £30</option>
-      </select>
-
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" name="date" required />
-
-      <button type="submit">Book Now</button>
-    </form>
-  </section>
-
-  <section id="map">
-    <h2>Our Location</h2>
-    <div id="google-map" style="height: 400px; width: 100%;"></div>
   </section>
 
   <footer>
     <p>&copy; 2025 Fresh Shine Car Wash. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
-  <script>
-    function initMap() {
-      var bracknell = {lat: 51.4093, lng: -0.7480};
-      var map = new google.maps.Map(document.getElementById('google-map'), {
-        zoom: 12,
-        center: bracknell
-      });
-      var marker = new google.maps.Marker({
-        position: bracknell,
-        map: map,
-        title: 'Fresh Shine Car Wash Location'
-      });
-    }
-  </script>
 </body>
 </html>
